@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Counter</title>
+        <style>
+            body {
+                width:100vw;
+                height:100vh;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                background-image:url ();
+                background-repeat:no-repeat;
+                background-size: 30px;
+                background-position:center;
+            }
+        </style>
+</head>
+<body>
+    <style>
+        #counter {
+            display:flex;
+            padding: 5px;
+            background-color:rgb(38, 38, 128);
+        }
+
+        #counter > button {
+            background-color: rgb(253, 253, 59);
+            border:none;
+            width: 150px;
+            height: 50px;
+            border-radius: 20px;
+            border: 3px solid rgb(51, 51, 10);
+    
+        }
+        #counter > div {
+            flex:1;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            padding: 10px;
+            color: white;
+        }
+
+        #bar {
+            width: 0px;
+            height:10px;
+            background-color:#BAD;
+            transition: width 0.5s;
+        }
+
+    </style>
+    <div id="counter">
+        <button onClick="dec()">-</button>
+        <div>1</div>
+        <button onClick="inc()">+</button>
+    </div>
+    <div id="bar">
+    </div>
+    <script>
+        var num = 1;
+        function dec () {
+            //console.log("change background color");
+            //debugger;
+            //console.log("change text color");
+            //debugger;
+            //blah.manded;
+            //debugger;
+            num = num - 1;
+            document.querySelector("#counter > div").innerText=num;
+            document.querySelector("#bar").style.width=(num*10) + "px";
+        }
+
+        function inc () {
+            num = num + 1;
+            document.querySelector("#counter > div").innerText=num;
+            document.querySelector("#bar").style.width=(num*10) + "px";
+
+        }
+    </script>
+</body>
+</html>
